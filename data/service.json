@@ -1,0 +1,24 @@
+{
+  "profiles": [
+    {
+      "name": "dev",
+      "description": "Is TEST OMH"
+    }
+  ],
+
+  "services" : [
+    {
+      "name": "service",
+      "startClass": "org.example.client.generated.HelloWorldServer",
+      "rmiPort": 9228,
+      "profiles": ["dev"]
+    }
+    ,
+    {
+      "name": "service",
+      "startClass": "org.example.client.generated.HelloWorldServer",
+      "rmiPort": 9227,
+      "profiles": ["dev"]
+    }
+  ]
+}

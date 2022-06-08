@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  server:
+    image: vitaliiberkunov/service:latest
+
+  registry:
+    image: dvayanu/distributemeregistry:latest
+    ports:
+      - '9229:9229'
