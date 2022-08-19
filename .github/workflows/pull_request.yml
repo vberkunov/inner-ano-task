@@ -1,4 +1,4 @@
-  name: Run the Action on each commit
+  name: Pull request on comit
   on:
     push:
       branches-ignore: master
