@@ -1,6 +1,8 @@
 name: Java CI
 
-on: [push]
+on:
+  push:
+    branches: [ "master" ]
 
 jobs:
   build:
@@ -18,14 +20,14 @@ jobs:
         key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
         restore-keys: |
           ${{ runner.os }}-maven-
-          
+  
     - name: CheckStyle
       run: mvn -B verify checkstyle:checkstyle
     - uses: jwgmeligmeyling/checkstyle-github-action@master
       with:
         path: '**/checkstyle-result.xml'
-        
-     - name: PMD
+      
+    - name: PMD 
       run: mvn -B verify pmd:pmd
     - uses: jwgmeligmeyling/pmd-github-action@master
       with:
