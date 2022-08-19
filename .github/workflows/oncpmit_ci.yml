@@ -22,7 +22,7 @@ jobs:
           ${{ runner.os }}-maven-
           
     - name: Run check style
-    - uses: nikitasavinov/checkstyle-action@master
+      uses: nikitasavinov/checkstyle-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         reporter: 'github-pr-check'
